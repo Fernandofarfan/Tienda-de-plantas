@@ -7,16 +7,13 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <div className="app-container">
-        <Routes>
-          <Route path="/" element={<Navigate to="/products" />} />
-          <Route path="/products" element={<ProductList />} />
-          <Route path="/about" element={<AboutUs />} />
-        </Routes>
-      </div>
-    </Router>
+    <Routes>
+  <Route path="/" element={<Navigate to="/products" />} />
+  <Route path="/products" element={<ProductList />} />
+  <Route path="/about" element={<AboutUs />} />
+  <Route path="/cart" element={<CartItems />} /> {/* Agregar esta línea */}
+</Routes>
+
   );
 }
 

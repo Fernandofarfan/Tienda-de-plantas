@@ -107,12 +107,8 @@ body {
     margin-top: 10px;
 }
 
-.product-button1:hover {
-    background-color: #585857;
-}
-
-.product-button1 {
-    background-color: black;
+.product-button {
+    background-color: #4CAF50;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -120,6 +116,11 @@ body {
     transition: background-color 0.3s ease-in-out;
     margin-top: 10px;
 }
+
+.product-button:hover {
+    background-color: #45a049;
+}
+
 
 .product-button:hover {
     background-color: #c0392b;
