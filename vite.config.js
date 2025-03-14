@@ -3,6 +3,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: "/", // Corregir a "/"
+  base: "/fernandofarfan-tienda-de-plantas/", // Asegúrate de que esta sea la URL correcta en GitHub Pages
   plugins: [react()],
 });

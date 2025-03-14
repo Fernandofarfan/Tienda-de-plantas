@@ -8,6 +8,7 @@ import AdminDashboard from "./components/AdminDashboard";
 import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import AdminRoute from "./components/AdminRoute";
+import "./App.css";
 
 function App() {
   return (
