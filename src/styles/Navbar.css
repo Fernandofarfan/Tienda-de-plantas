@@ -1,0 +1,102 @@
+/* ============================== */
+/* 🌱 Navbar Styles */
+/* ============================== */
+
+.navbar {
+    background-color: #4CAF50; /* Color principal */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================== */
+/* 🌱 Logo y Título */
+/* ============================== */
+.navbar .luxury {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar .luxury img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.navbar .luxury h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.navbar .luxury i {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* ============================== */
+/* 🌱 Enlaces de Navegación */
+/* ============================== */
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #FFD700; /* Amarillo dorado en hover */
+}
+
+/* ============================== */
+/* 🌱 Botón del Carrito */
+/* ============================== */
+.cart-button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 8px 16px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cart-button:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+/* ============================== */
+/* 🌱 Responsive: Modo Móvil */
+/* ============================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .cart-button {
+        width: 100%;
+    }
+}
