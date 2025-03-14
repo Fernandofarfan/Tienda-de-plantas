@@ -15,7 +15,7 @@ const PlantList = () => {
             <h1 className="plant_heading">{categoryData.category}</h1>
             <div className="product-list">
               {(categoryData.plants || categoryData).map((plant, idx) => (
-                <div className="product-card" key={plantKey(plant, index, idx)}>
+                <div className="product-card" key={`${plant.name}-${index}-${idx}`}>
                   <img className="product-image" src={plant.image} alt={plant.name} />
                   <h3 className="product-title">{plant.name}</h3>
                   <p>{plant.description}</p>

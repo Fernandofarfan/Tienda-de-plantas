@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addReview } from "../redux/reviewSlice";
-import "./../styles/ReviewSystem.css";
+import "../styles/ReviewSystem.css";
 
 const ReviewSystem = ({ productId }) => {
   const [rating, setRating] = useState(0);

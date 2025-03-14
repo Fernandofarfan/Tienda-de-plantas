@@ -19,8 +19,8 @@ const CartItems = () => {
       {cartItems.length === 0 ? (
         <p>The cart is empty</p>
       ) : (
-        cartItems.map(item => (
-          <div className="cart-item" key={`${item.name}-${item.image}`}>
+        cartItems.map((item, index) => (
+          <div className="cart-item" key={`${item.name}-${index}`}>        
             <img className="cart-item-image" src={item.image} alt={item.name} />
             <div className="cart-item-details">
               <h3>{item.name}</h3>

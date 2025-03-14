@@ -1,19 +1,22 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Link, Navigate } from "react-router-dom";
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import ProductList from "./components/ProductList";
 import AboutUs from "./components/AboutUs";
+import CartItems from "./components/CartItems";
 import Navbar from "./components/Navbar";
 import "./App.css";
 
 function App() {
   return (
-    <Routes>
-  <Route path="/" element={<Navigate to="/products" />} />
-  <Route path="/products" element={<ProductList />} />
-  <Route path="/about" element={<AboutUs />} />
-  <Route path="/cart" element={<CartItems />} /> {/* Agregar esta línea */}
-</Routes>
-
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Navigate to="/products" />} />
+        <Route path="/products" element={<ProductList />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/cart" element={<CartItems />} />
+      </Routes>
+    </>
   );
 }
 
