@@ -1,7 +1,7 @@
 const plantsArray = [
     {
         category: "Air Purifying Plants",
-        plants: [
+        plants: [ // <-- faltaba esta propiedad
             {
                 name: "Snake Plant",
                 image: "https://cdn.pixabay.com/photo/2021/01/22/06/04/snake-plant-5939187_1280.jpg",

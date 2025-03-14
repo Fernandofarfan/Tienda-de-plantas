@@ -4,7 +4,7 @@ import cartReducer from "./cartSlice";
 
 const store = configureStore({
   reducer: {
-    cart: cartReducer, // 🔹 Asegúrate de que está correctamente importado
+    cart: cartReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

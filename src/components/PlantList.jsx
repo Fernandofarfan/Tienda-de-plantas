@@ -10,17 +10,20 @@ const PlantList = () => {
   return (
     <div className="product-grid">
       {plantsArray.length > 0 ? (
-        plantsArray.map((category) => (
-          <div key={category.category}>
-            <h1>{category.category}</h1>
+        plantsArray.map((categoryData, index) => (
+          <div key={categoryData.category || index}>
+            <h1 className="plant_heading">{categoryData.category}</h1>
             <div className="product-list">
-              {category.plants.map((plant, index) => (
-                <div className="product-card" key={plant.name + index}>
+              {(categoryData.plants || categoryData).map((plant, idx) => (
+                <div className="product-card" key={plantKey(plant, index, idx)}>
                   <img className="product-image" src={plant.image} alt={plant.name} />
-                  <h3>{plant.name}</h3>
+                  <h3 className="product-title">{plant.name}</h3>
                   <p>{plant.description}</p>
-                  <p>{plant.cost}</p>
-                  <button onClick={() => dispatch(addItemToCart({ ...plant, id: plant.name + index }))}>
+                  <p className="product-cost">{plant.cost}</p>
+                  <button
+                    className="product-button"
+                    onClick={() => dispatch(addItemToCart({ ...plant, id: plant.name + index }))}
+                  >
                     Add to Cart
                   </button>
                 </div>
