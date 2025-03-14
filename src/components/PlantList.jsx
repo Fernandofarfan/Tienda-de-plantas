@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "./CreateSlice";
-import plantsArray from "./plantsArray";
-import './../ProductList.css'
+import plantsArray from "../redux/plantsArray";
+import "../styles/ProductList.css";
 
 
 

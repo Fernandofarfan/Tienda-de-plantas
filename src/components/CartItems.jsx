@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeItemFromCart, increaseItemQuantity, decreaseItemQuantity, clearItems } from "./CreateSlice";
-import './CartItems.css'
+import "../styles/CartItems.css";
 
 function CartItems(){
     const cartItems = useSelector(state=>state.cart.cartItems)
