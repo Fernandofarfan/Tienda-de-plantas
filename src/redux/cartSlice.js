@@ -4,14 +4,14 @@ import { persistReducer } from 'redux-persist';
 
 const initialState = {
     cartItems: [],
-    totalItemsCount: 0,  // Se agrega estado para cantidad total
+    totalItemsCount: 0,
 };
 
 const cartSlice = createSlice({
     name: "cart",
     initialState,
     reducers: {
-        addItemToCart(state, action) {
+        addItemToCart: (state, action) => {
             const existingItem = state.cartItems.find(item => item.name === action.payload.name);
             if (existingItem) {
                 existingItem.quantity += 1;
@@ -20,11 +20,11 @@ const cartSlice = createSlice({
             }
             state.totalItemsCount += 1;
         },
-        removeItemFromCart(state, action) {
+        removeItemFromCart: (state, action) => {
             state.cartItems = state.cartItems.filter(item => item.name !== action.payload.name);
-            state.totalItemsCount -= action.payload.quantity;
+            state.totalItemsCount = state.cartItems.reduce((total, item) => total + item.quantity, 0);
         },
-        clearCart(state) {
+        clearCart: (state) => {
             state.cartItems = [];
             state.totalItemsCount = 0;
         }
