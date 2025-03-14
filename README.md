@@ -1,8 +1,22 @@
-# React + Vite
+# 🌿 Tienda de Plantas - Paradise Nursery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
+Paradise Nursery es una tienda de plantas en línea que permite a los usuarios comprar y descubrir una variedad de plantas categorizadas según sus beneficios y mantenimiento.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías Utilizadas
+- ⚛️ React + Vite
+- 📦 Redux Toolkit (Persistencia de carrito)
+- 🎨 CSS Modules / Tailwind
+- ☀️ Dark Mode con Context API
+- 🌍 PWA (Service Workers)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Capturas de Pantalla
+![Home](screenshots/home.png)
+![Dark Mode](screenshots/dark-mode.png)
+
+## 🛠 Instalación
+```bash
+git clone https://github.com/fernandofarfan/tienda-de-plantas.git
+cd tienda-de-plantas
+npm install
+npm run dev
