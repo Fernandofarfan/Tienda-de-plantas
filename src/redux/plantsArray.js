@@ -32,12 +32,7 @@ const plantsArray = [
                 description: "Easy to care for and effective at removing toxins.",
                 cost: "$17"
             },
-            {
-                name: "Aloe Vera",
-                image: "https://cdn.pixabay.com/photo/2018/04/02/07/42/leaf-3283175_1280.jpg",
-                description: "Purifies the air and has healing properties for skin.",
-                cost: "$14"
-            }
+           
         ]
     },
     {
@@ -67,12 +62,7 @@ const plantsArray = [
                 description: "Refreshing aroma, used in teas and cooking.",
                 cost: "$12"
             },
-            {
-                name: "Lemon Balm",
-                image: "https://cdn.pixabay.com/photo/2019/09/16/07/41/balm-4480134_1280.jpg",
-                description: "Citrusy scent, relieves stress and promotes sleep.",
-                cost: "$14"
-            },
+        
             {
                 name: "Hyacinth",
                 image: "https://cdn.pixabay.com/photo/2019/04/07/20/20/hyacinth-4110726_1280.jpg",
@@ -114,12 +104,7 @@ const plantsArray = [
                 description: "Calming scent, used in aromatherapy.",
                 cost: "$20"
             },
-            {
-                name: "Catnip",
-                image: "https://cdn.pixabay.com/photo/2015/07/02/21/55/cat-829681_1280.jpg",
-                description: "Repels mosquitoes and attracts cats.",
-                cost: "$13"
-            }
+            
         ]
     },
     {
@@ -155,12 +140,7 @@ const plantsArray = [
                 description: "Soothes anxiety and promotes sleep.",
                 cost: "$15"
             },
-            {
-                name: "Calendula",
-                image: "https://cdn.pixabay.com/photo/2019/07/15/18/28/flowers-4340127_1280.jpg",
-                description: "Heals wounds and soothes skin irritations.",
-                cost: "$12"
-            }
+          
         ]
     },
     {
@@ -196,12 +176,7 @@ const plantsArray = [
                 description: "Drought-tolerant plants with unique shapes and colors.",
                 cost: "$18"
             },
-            {
-                name: "Aglaonema",
-                image: "https://cdn.pixabay.com/photo/2014/10/10/04/27/aglaonema-482915_1280.jpg",
-                description: "Requires minimal care and adds color to indoor spaces.",
-                cost: "$22"
-            }
+            
         ]
     }
 ];

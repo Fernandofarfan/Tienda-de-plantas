@@ -1,117 +1,40 @@
-/* ============================== */
-/* 🌱 Navbar Styles */
-/* ============================== */
-
-/* Navbar */
 .navbar {
-    background-color: #4CAF50;
-    color: #fff!important;
-    padding: 15px;
+    background-color: #4F6F52;
+    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 20px;
-}
-
-.navbar ul {
+  }
+  
+  .navbar-title {
+    font-size: 1.8rem;
+    color: #FFFFFF;
+  }
+  
+  .navbar-links {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1100px;
-}
-
-.navbar li {
-    margin-right: 30px;
-}
-
-.navbar .ul div a {
-    color: white;
-    font-size: 30px;
-    text-decoration: none;  
-}
-
-
-/* ============================== */
-/* 🌱 Logo y Título */
-/* ============================== */
-.navbar .luxury {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.navbar .luxury img {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-}
-
-.navbar .luxury h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.navbar .luxury i {
-    font-size: 14px;
-    opacity: 0.8;
-}
-
-/* ============================== */
-/* 🌱 Enlaces de Navegación */
-/* ============================== */
-.navbar-links {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-link {
-    font-size: 18px;
-    color: white;
+    gap: 25px;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    color: #FFFFFF;
     text-decoration: none;
     transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #FFD700; /* Amarillo dorado en hover */
-}
-
-/* ============================== */
-/* 🌱 Botón del Carrito */
-/* ============================== */
-.cart-button {
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 8px 16px;
-    font-size: 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.cart-button:hover {
-    background-color: white;
-    color: #4CAF50;
-}
-
-/* ============================== */
-/* 🌱 Responsive: Modo Móvil */
-/* ============================== */
-@media (max-width: 768px) {
+  }
+  
+  .nav-link:hover {
+    color: #86A789;
+  }
+  
+  @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px;
+      flex-direction: column;
+      gap: 15px;
     }
-
     .navbar-links {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
+      flex-direction: column;
+      gap: 10px;
     }
-
-    .cart-button {
-        width: 100%;
-    }
-}
+  }
+  

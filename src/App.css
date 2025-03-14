@@ -1,3 +1,4 @@
+/* App.css */
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +6,9 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F9F8F3;
+  color: #2C3333;
 }
 
 .app-container {
@@ -20,26 +22,36 @@ body {
 .landing-page {
   width: 100%;
   text-align: center;
-  background: linear-gradient(to right, #4CAF50, #8BC34A);
+  background: linear-gradient(to right, #4F6F52, #739072);
   padding: 50px 0;
 }
 
 .landing-title {
-  font-size: 36px;
-  font-weight: bold;
-  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
 }
 
 .get-started-button {
-  padding: 10px 20px;
-  font-size: 18px;
-  background-color: #4CAF50;
-  color: white;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  background-color: #4F6F52;
+  color: #FFFFFF;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .get-started-button:hover {
-  background-color: #388E3C;
+  background-color: #739072;
 }
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
