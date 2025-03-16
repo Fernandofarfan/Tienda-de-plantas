@@ -1,0 +1,28 @@
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .filter-input, .filter-select {
+    padding: 10px;
+    border: 2px solid #4F6F52;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .filter-input {
+    width: 250px;
+  }
+  
+  .filter-select {
+    cursor: pointer;
+  }
+  
+  .filter-input:focus, .filter-select:focus {
+    border-color: #86A789;
+  }
+  

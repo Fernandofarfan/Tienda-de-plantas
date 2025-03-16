@@ -1,39 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import ProductFilter from "./ProductFilter";
 import { useDispatch } from "react-redux";
 import { addItemToCart } from "../redux/cartSlice";
-import plantsArray from "../redux/plantsArray";
 import "../styles/ProductList.css";
 
 const PlantList = () => {
   const dispatch = useDispatch();
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   return (
     <div className="product-grid">
-      {plantsArray.length > 0 ? (
-        plantsArray.map((categoryData, index) => (
-          <div key={categoryData.category || index}>
-            <h1 className="plant_heading">{categoryData.category}</h1>
-            <div className="product-list">
-              {(categoryData.plants || categoryData).map((plant, idx) => (
-                <div className="product-card" key={`${plant.name}-${index}-${idx}`}>
-                  <img className="product-image" src={plant.image} alt={plant.name} />
-                  <h3 className="product-title">{plant.name}</h3>
-                  <p>{plant.description}</p>
-                  <p className="product-cost">{plant.cost}</p>
-                  <button
-                    className="product-button"
-                    onClick={() => dispatch(addItemToCart({ ...plant, id: plant.name + index }))}
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              ))}
+      <ProductFilter setFilteredProducts={setFilteredProducts} />
+      
+      <div className="product-list">
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((plant, idx) => (
+            <div className="product-card" key={`${plant.name}-${idx}`}>
+              <img className="product-image" src={plant.image} alt={plant.name} />
+              <h3 className="product-title">{plant.name}</h3>
+              <p>{plant.description}</p>
+              <p className="product-cost">{plant.cost}</p>
+              <button
+                className="product-button"
+                onClick={() => dispatch(addItemToCart(plant))}
+              >
+                Añadir al carrito
+              </button>
             </div>
-          </div>
-        ))
-      ) : (
-        <p>Loading plants...</p>
-      )}
+          ))
+        ) : (
+          <p>No se encontraron plantas.</p>
+        )}
+      </div>
     </div>
   );
 };

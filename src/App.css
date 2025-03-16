@@ -1,16 +1,18 @@
-/* App.css */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Fuente y colores globales */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #F9F8F3;
-  color: #2C3333;
+  font-family: 'Roboto Slab', serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
+/* Contenedor principal */
 .app-container {
   display: flex;
   flex-direction: column;
@@ -19,11 +21,12 @@ body {
   min-height: 100vh;
 }
 
+/* Landing Page */
 .landing-page {
   width: 100%;
   text-align: center;
-  background: linear-gradient(to right, #4F6F52, #739072);
-  padding: 50px 0;
+  background: linear-gradient(to right, #4F6F52, #86A789);
+  padding: 50px 20px;
 }
 
 .landing-title {
@@ -44,14 +47,11 @@ body {
 }
 
 .get-started-button:hover {
-  background-color: #739072;
+  background-color: #86A789;
 }
 
-body {
-  font-family: 'Roboto Slab', serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
+/* Ajustes de títulos */
+h1, h2, h3 {
   text-align: center;
+  margin-bottom: 20px;
 }
-

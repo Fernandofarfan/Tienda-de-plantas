@@ -1,19 +1,25 @@
-/* Dark mode */
-body.dark-mode {
+/* Modo oscuro */
+.dark-mode {
     background-color: #222;
     color: white;
-}
-
-.dark-mode-toggle {
+    transition: background 0.4s ease-in-out, color 0.4s ease-in-out;
+  }
+  
+  /* Botón de cambio de modo */
+  .dark-mode-toggle {
     padding: 10px 20px;
     border: none;
-    background-color: #4CAF50;
+    background: linear-gradient(to right, #4F6F52, #86A789);
     color: white;
+    font-weight: bold;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 5px;
     font-size: 16px;
-}
-
-.dark-mode-toggle:hover {
-    background-color: #45a049;
-}
+    transition: background 0.3s ease-in-out, transform 0.2s;
+  }
+  
+  .dark-mode-toggle:hover {
+    background: linear-gradient(to right, #739072, #4F6F52);
+    transform: scale(1.05);
+  }
+  

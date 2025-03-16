@@ -1,12 +1,15 @@
 import React from "react";
-import "./../styles/DarkMode.css";
+import { useTheme } from "../context/ThemeContext";
+import "../styles/DarkMode.css";
 
-const DarkModeToggle = ({ darkMode, setDarkMode }) => {
-    return (
-        <button className="dark-mode-toggle" onClick={() => setDarkMode(!darkMode)}>
-            {darkMode ? "Light Mode 🌞" : "Dark Mode 🌙"}
-        </button>
-    );
+const DarkModeToggle = () => {
+  const { darkMode, setDarkMode } = useTheme();
+
+  return (
+    <button className="dark-mode-toggle" onClick={() => setDarkMode(!darkMode)}>
+      {darkMode ? "🌞 Modo Claro" : "🌙 Modo Oscuro"}
+    </button>
+  );
 };
 
 export default DarkModeToggle;

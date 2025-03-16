@@ -1,18 +1,27 @@
 import React from "react";
-import ReviewSystem from "./ReviewSystem"; // Asegúrate de que este archivo existe y está en la misma carpeta
+import { useDispatch } from "react-redux";
+import { addItemToCart } from "../redux/cartSlice";
+import "../styles/ProductList.css";
 
 const ProductCard = ({ product }) => {
-  if (!product) return null; // Evita errores si `product` no está definido
+  const dispatch = useDispatch();
+
+  if (!product) return null;
 
   return (
     <div className="product-card">
-      <img src={product.image} alt={product.name} />
-      <h3>{product.name}</h3>
+      <img className="product-image" src={product.image} alt={product.name} />
+      <h3 className="product-title">{product.name}</h3>
       <p>{product.description}</p>
-      <p>Precio: {product.cost}</p>
-      <ReviewSystem productId={product.id} />
+      <p className="product-cost">{product.cost}</p>
+      <button
+        className="product-button"
+        onClick={() => dispatch(addItemToCart(product))}
+      >
+        Añadir al carrito
+      </button>
     </div>
   );
 };
 
-export default ProductCard;
+export default React.memo(ProductCard);

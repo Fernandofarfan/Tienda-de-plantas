@@ -1,0 +1,139 @@
+/* Estilos generales */
+body {
+    background: linear-gradient(to right, #4F6F52, #86A789);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Contenedor principal */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Tarjeta de login con Glassmorphism */
+  .login-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 35px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Título */
+  .login-card h2 {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  /* Mensaje de error */
+  .error-message {
+    color: #D04848;
+    font-size: 0.9rem;
+    background: rgba(255, 228, 228, 0.8);
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  /* Formulario */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Inputs con efecto Glass */
+  .input-group {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .input-group label {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out, background 0.3s;
+  }
+  
+  .input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .input-group input:focus {
+    border-color: #fff;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Botón */
+  .login-button {
+    background: #FFFFFF;
+    color: #4F6F52;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+  }
+  
+  .login-button:hover {
+    background: #739072;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  /* Enlace de registro */
+  .register-text {
+    font-size: 0.9rem;
+    margin-top: 15px;
+    color: #fff;
+  }
+  
+  .register-text a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .register-text a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 480px) {
+    .login-card {
+      width: 90%;
+    }
+  }
+  
