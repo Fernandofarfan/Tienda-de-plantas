@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleFavorite } from "../redux/wishlistSlice"; // Importamos Redux
+import { toggleFavorite } from "../redux/wishlistSlice";
 import "../styles/ProductList.css";
 
 const ProductCard = ({ product }) => {

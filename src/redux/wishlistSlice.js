@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  favorites: JSON.parse(localStorage.getItem("favorites")) || [], // Cargar favoritos de localStorage
+  favorites: JSON.parse(localStorage.getItem("favorites")) || [], // Cargar favoritos guardados
 };
 
 const wishlistSlice = createSlice({
@@ -10,7 +10,7 @@ const wishlistSlice = createSlice({
   reducers: {
     toggleFavorite: (state, action) => {
       const item = action.payload;
-      const exists = state.favorites.find((fav) => fav.name === item.name);
+      const exists = state.favorites.some((fav) => fav.name === item.name);
 
       if (exists) {
         state.favorites = state.favorites.filter((fav) => fav.name !== item.name);
@@ -18,7 +18,7 @@ const wishlistSlice = createSlice({
         state.favorites.push(item);
       }
 
-      // Guardar en localStorage
+      // Guardar en localStorage después de cada cambio
       localStorage.setItem("favorites", JSON.stringify(state.favorites));
     },
   },

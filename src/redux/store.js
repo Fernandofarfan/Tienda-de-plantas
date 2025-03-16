@@ -12,12 +12,14 @@ const persistConfig = {
   whitelist: ["cart", "auth", "wishlist"], // ⬅️ Persistir favoritos
 };
 
+
 const rootReducer = combineReducers({
   cart: cartReducer,
   reviews: reviewReducer,
   auth: authReducer,
-  wishlist: wishlistReducer,
+  wishlist: wishlistReducer, // ⬅️ Asegúrate de que está aquí
 });
+
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
