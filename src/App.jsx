@@ -11,20 +11,17 @@ import AdminRoute from "./components/AdminRoute";
 import "./App.css";
 
 function App() {
+  console.log("App component is rendering"); // Para depurar
+
   return (
     <>
       <Navbar />
       <Routes>
-        {/* Rutas de Usuarios */}
         <Route path="/" element={<Navigate to="/products" />} />
         <Route path="/products" element={<ProductList />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/cart" element={<CartItems />} />
-
-        {/* Ruta de Login */}
         <Route path="/login" element={<Login />} />
-
-        {/* Rutas Protegidas */}
         <Route path="/admin/*" element={<AdminRoute />}>
           <Route index element={<AdminDashboard />} />
         </Route>
