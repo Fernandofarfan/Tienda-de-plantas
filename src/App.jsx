@@ -5,6 +5,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import AdminRoute from "./components/AdminRoute";
 import ErrorBoundary from "./components/ErrorBoundary"; // Importamos el manejador de errores
 import "./App.css";
+import Wishlist from "./pages/Wishlist";
 
 // Carga diferida (lazy loading) para mejorar el rendimiento
 const ProductList = lazy(() => import("./components/ProductList"));
@@ -24,6 +25,7 @@ function App() {
             <Route path="/products" element={<ProductList />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/cart" element={<CartItems />} />
+            <Route path="/wishlist" element={<Wishlist />} />
             <Route path="/login" element={<Login />} />
             <Route path="/admin/*" element={<AdminRoute />}>
               <Route index element={<AdminDashboard />} />
