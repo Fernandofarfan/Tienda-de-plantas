@@ -20,3 +20,6 @@ git clone https://github.com/fernandofarfan/tienda-de-plantas.git
 cd tienda-de-plantas
 npm install
 npm run dev
+```
+
+Abre tu navegador en `http://localhost:5173` para ver la aplicación.
