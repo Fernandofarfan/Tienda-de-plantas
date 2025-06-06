@@ -1,8 +1,10 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleFavorite } from "../redux/wishlistSlice";
 import "../styles/Wishlist.css";
 
 const Wishlist = () => {
+  const dispatch = useDispatch();
   const favorites = useSelector((state) => state.wishlist.favorites);
 
   return (
@@ -18,6 +20,12 @@ const Wishlist = () => {
               <h3>{plant.name}</h3>
               <p>{plant.description}</p>
               <p className="wishlist-cost">{plant.cost}</p>
+              <button
+                className="wishlist-remove-button"
+                onClick={() => dispatch(toggleFavorite(plant))}
+              >
+                Eliminar
+              </button>
             </div>
           ))}
         </div>

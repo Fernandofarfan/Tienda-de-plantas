@@ -7,6 +7,12 @@ const ProductFilter = ({ setFilteredProducts }) => {
   const [category, setCategory] = useState("All");
   const [sortOrder, setSortOrder] = useState("asc");
 
+  const clearFilters = () => {
+    setSearch("");
+    setCategory("All");
+    setSortOrder("asc");
+  };
+
   // Cargar filtros guardados
   useEffect(() => {
     const savedFilters = JSON.parse(localStorage.getItem("filters"));
@@ -68,6 +74,10 @@ const ProductFilter = ({ setFilteredProducts }) => {
         <option value="asc">Precio: Menor a Mayor</option>
         <option value="desc">Precio: Mayor a Menor</option>
       </select>
+
+      <button type="button" onClick={clearFilters} className="filter-clear-button">
+        Limpiar Filtros
+      </button>
     </div>
   );
 };

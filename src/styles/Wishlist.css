@@ -30,4 +30,18 @@
     color: #4F6F52;
     font-weight: bold;
   }
-  
+
+  .wishlist-remove-button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .wishlist-remove-button:hover {
+    background-color: #c9302c;
+  }
