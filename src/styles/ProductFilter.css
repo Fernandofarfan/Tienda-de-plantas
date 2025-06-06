@@ -25,4 +25,17 @@
   .filter-input:focus, .filter-select:focus {
     border-color: #86A789;
   }
-  
+
+  .filter-clear-button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .filter-clear-button:hover {
+    background-color: #c9302c;
+  }
