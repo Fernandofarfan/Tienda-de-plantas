@@ -1,33 +1,32 @@
 {
-  "name": "shoppingcart",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "build": "npx vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite build; vite preview --host"
+  "nombre": "carrito de compras",
+  "privado": true,
+  "versión": "0.0.0",
+  "tipo": "modulo",
+  "guiones": {
+    "despliegue": "npm run build",
+    "desplegar": "gh-pages -d dist",
+    "construir": "npx vite build",
+    "piedra": "eslint -c .eslintrc.cjs --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "vista previa": "vite build; vite preview --host"
   },
-  "dependencies": {
+  "dependencias": {
     "@reduxjs/toolkit": "^2.2.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.2.0",
-    "react-router-dom": "^7.3.0",
+    "react-router-dom": "^6.23.0",
     "redux": "^5.0.1",
     "redux-persist": "^6.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
+    "@types/react-dom": "^18.3.3",
+    "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.2",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.7",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
     "gh-pages": "^6.1.1",
     "vite": "^5.3.1"
   }
