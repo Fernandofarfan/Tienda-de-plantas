@@ -7,7 +7,6 @@ const CartItems = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector(state => state.cart?.cartItems || []);
 
-  console.log("Cart Items:", cartItems); // 🔹 Esto imprimirá el contenido del carrito
 
   const totalAmount = cartItems.length
     ? cartItems.reduce((total, item) => total + parseFloat(item.cost.replace('$', '')) * item.quantity, 0)
